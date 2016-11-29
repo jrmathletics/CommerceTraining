@@ -117,3 +117,4 @@ C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.S
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.Search.LuceneSearchProvider.xml
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.SqlDataProvider.xml
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.WebConsoleLib.xml
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\MenuPin.dll

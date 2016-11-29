@@ -248,6 +248,10 @@
       <HintPath>..\packages\EPiServer.Commerce.Core.10.1.0\lib\net45\Mediachase.WebConsoleLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MenuPin, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MenuPin.4.0.0\lib\net45\MenuPin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -386,6 +390,7 @@
     <Folder Include="Business\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\Scripts\MenuPin\MenuPinInit.js" />
     <Content Include="Models\Catalog\_PlaceHolder.txt" />
     <Content Include="Models\Properties\_PlaceHolder.txt" />
     <Content Include="Static\css\bootstrap-collapse.js" />
@@ -440,6 +445,7 @@
     <Content Include="Views\Shared\Navigation.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="module.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
