@@ -1,0 +1,22 @@
+﻿    @using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model CommerceTraining.Models.Pages.CheckOutViewModel
+
+<div>
+    Shipping rates
+
+
+</div>
+
+
+<div>
+    Make your choices
+    @using (@Html.BeginForm("CheckOut", "Checkout", FormMethod.Post))
+    {
+        @*@Html.DropDownListFor(m => m.SelectedShipId, new SelectList(Model.ShipmentMethods, "ShippingMethodId", "DisplayName"))
+            @Html.DropDownListFor(m => m.SelectedPayId, new SelectList(Model.PaymentMethods, "PaymentMethodId", "Name"))*@
+
+        <button type="submit">Check out</button>
+    }
+</div>
