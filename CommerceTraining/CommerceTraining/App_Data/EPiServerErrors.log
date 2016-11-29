@@ -1,0 +1,19 @@
+﻿2016-11-29 10:45:14,281 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for 'Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7'
+System.NotSupportedException: The database 'EPiServerDB' has not been updated to the version '7038.0', current database version is '7037.0'. Update the database manually by running the cmdlet 'update-epidatabase' in the package manager console or set 'updateDatabaseSchema="true"' on episerver.framework configuration element
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowUpdateDatabaseException(Version databaseVersion, Version codeVersion, String connectionStringName)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(ConnectionStringsSection connectionStrings, Boolean automaticSchemaUpdatesEnabled, Boolean automaticSchemaCreationEnabled)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass3_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.NotSupportedException: The database 'EPiServerDB' has not been updated to the version '7038.0', current database version is '7037.0'. Update the database manually by running the cmdlet 'update-epidatabase' in the package manager console or set 'updateDatabaseSchema="true"' on episerver.framework configuration element
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.ThrowUpdateDatabaseException(Version databaseVersion, Version codeVersion, String connectionStringName)
+   at EPiServer.Data.SchemaUpdates.Internal.DatabaseSchemaManagerImplementation.EnsureDatabaseSchema(ConnectionStringsSection connectionStrings, Boolean automaticSchemaUpdatesEnabled, Boolean automaticSchemaCreationEnabled)
+   at EPiServer.Data.DataInitialization.ValidateDatabaseSchema(InitializationEngine context)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.<>c__DisplayClass3_0.<Initialize>b__0()
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.Internal.ModuleNode.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
