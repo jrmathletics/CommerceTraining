@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
@@ -17,6 +18,7 @@ using EPiServer.Security;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
 using Mediachase.Commerce;
+using Mediachase.Commerce.Customers;
 using Mediachase.Commerce.Security;
 
 namespace CommerceTraining.Controllers
@@ -60,8 +62,7 @@ namespace CommerceTraining.Controllers
         {
             // ToDo: (lab D1) add a LineItem to the Cart
 
-            var contactId = PrincipalInfo.CurrentPrincipal.GetContactId();
-            var cart =  _orderRepository.LoadOrCreateCart<ICart>(contactId,"Default");
+            var cart =  _orderRepository.LoadOrCreateCart<ICart>(GetContactId(), "Default");
 
             var variantCode = currentContent.Code;
 
@@ -81,20 +82,41 @@ namespace CommerceTraining.Controllers
                     if (lineitem.Code.Equals(variantCode))
                     {
                         lineitem.Quantity += Quantity;
+                        lineitem.PlacedPrice = currentContent.GetDefaultPrice().UnitPrice.Amount;
+                        if (currentContent.CanBeMonogrammed)
+                        {
+                            lineitem.Properties["Monogram"] = Monogram;
+                        }
                     }
+                }
+                var lineItem = _orderFactory.CreateLineItem(variantCode);
+                lineItem.Quantity = Quantity;
+                lineItem.PlacedPrice = currentContent.GetDefaultPrice().UnitPrice.Amount;
+                if (currentContent.CanBeMonogrammed)
+                {
+                    lineItem.Properties["Monogram"] = Monogram;
+                }
+                var validated = _lineItemValidator.Validate(lineItem, cart.Market, (item, issue) => { });
+                if (validated)
+                {
+                    cart.AddLineItem(lineItem);
                 }
             }
             else
             {
-                    var lineItem = _orderFactory.CreateLineItem(variantCode);
-                    lineItem.Quantity = Quantity;
+                var lineItem = _orderFactory.CreateLineItem(variantCode);
+                lineItem.Quantity = Quantity;
+                if (currentContent.CanBeMonogrammed)
+                {
                     lineItem.Properties["Monogram"] = Monogram;
-                    var validated = _lineItemValidator.Validate(lineItem, cart.Market, (item, issue) => { });
-                    if (validated)
-                    {
-                        cart.AddLineItem(lineItem);
-                    }
-             
+                }
+                lineItem.PlacedPrice = currentContent.GetDefaultPrice().UnitPrice.Amount;
+                var validated = _lineItemValidator.Validate(lineItem, cart.Market, (item, issue) => { });
+                if (validated)
+                {
+                    cart.AddLineItem(lineItem);
+                }
+
             }
             _orderRepository.Save(cart);
             
@@ -108,5 +130,15 @@ namespace CommerceTraining.Controllers
         //{
 
         //}
+
+        protected static Guid GetContactId()
+        {
+            return PrincipalInfo.CurrentPrincipal.GetContactId();
+        }
+
+        protected static CustomerContact GetContact()
+        {
+            return CustomerContext.Current.GetContactById(GetContactId());
+        }
     }
 }

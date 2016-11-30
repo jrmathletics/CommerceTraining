@@ -19,6 +19,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.Commerce.Order;
 using EPiServer.Commerce.Marketing;
 using System;
+using Castle.Core.Internal;
 using EPiServer.Security;
 using Mediachase.Commerce.Customers;
 using Mediachase.Commerce.Security;
@@ -63,11 +64,31 @@ namespace CommerceTraining.Controllers
         public ActionResult Index(CartPage currentPage)
         {
             // ToDo: (lab D2)
+            var cart = _orderRepository.LoadCart<ICart>(GetContactId(),DefaultCartName);
 
+            if (cart == null)
+            {
+                return View("NoCart");
+            }
+            else
+            {
+                var warningMessages = ValidateCart(cart);
+                if (warningMessages.IsNullOrEmpty())
+                {
+                    warningMessages += "No messages";
+                }
+                _promotionEngine.Run(cart);
+                var viewModel = new CartViewModel
+                {
+                    LineItems = cart.GetAllLineItems(),
+                    SubTotal = _orderGroupCalculator.GetSubTotal(cart),
+                    WarningMessage = warningMessages
+                };
+                _orderRepository.Save(cart);
 
-
-            // The below is a dummy, remove when lab D2 is done
-            return null;
+                return View("Index", viewModel);
+            }
+            
         }
 
         public ActionResult Checkout()

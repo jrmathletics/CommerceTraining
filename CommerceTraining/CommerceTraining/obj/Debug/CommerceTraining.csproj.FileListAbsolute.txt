@@ -118,3 +118,11 @@ C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.S
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.SqlDataProvider.xml
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\Mediachase.WebConsoleLib.xml
 C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\MenuPin.dll
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\EPiCode.Commerce.RestApi.dll
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Web.Http.dll
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Net.Http.Formatting.dll
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Web.Http.WebHost.dll
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\EPiCode.Commerce.RestApi.pdb
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Web.Http.xml
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Net.Http.Formatting.xml
+C:\EPiServer\CommerceTraining\CommerceTraining\CommerceTraining\bin\System.Web.Http.WebHost.xml

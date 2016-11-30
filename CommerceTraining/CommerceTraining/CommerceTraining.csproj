@@ -464,6 +464,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommerceRestApi\src\EPiCode.Commerce.RestApi\EPiCode.Commerce.RestApi.csproj">
+      <Project>{37a45fa4-1e04-48cd-9aa0-397e2b30e6a5}</Project>
+      <Name>EPiCode.Commerce.RestApi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
