@@ -2,12 +2,33 @@
 @using EPiServer.Web.Mvc.Html
 
 @model CommerceTraining.Models.ViewModels.ShirtVariationViewModel
-@{
-    var x = 0;
-    var y = x;
-}
+
 <img src="@Model.image"/><br/>
 Price: $@Model.priceString<br/>
 <br/>
 
 Can Be Monogrammed: @Html.CheckBoxFor(m=>m.CanBeMonogrammed)
+
+<div>
+    @using (Html.BeginForm("AddToCart", "Variation"))
+    {
+        <div>
+            Quantity: <input type="text" name="Quantity" value="1" />
+        </div>
+        <div>
+            Monogram: <input type="text" name="Monogram" />
+        </div>
+        <div>
+            <input type="submit" value="Add to cart" />
+        </div>
+    }
+</div>
+
+<div>
+    @using (Html.BeginForm("AddToWishList", "Variation"))
+    {
+        <div>
+            <input type="submit" value="Add to wishlist" />
+        </div>
+    }
+</div>

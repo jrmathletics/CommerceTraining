@@ -2,21 +2,31 @@
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
+using Castle.Core.Internal;
 using CommerceTraining.Models.Catalog;
+using CommerceTraining.Models.Pages;
 using CommerceTraining.Models.ViewModels;
 using EPiServer;
 using EPiServer.Commerce.Catalog;
 using EPiServer.Commerce.Catalog.ContentTypes;
+using EPiServer.Commerce.Order;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
+using EPiServer.Globalization;
+using EPiServer.Security;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
 using Mediachase.Commerce;
+using Mediachase.Commerce.Security;
 
 namespace CommerceTraining.Controllers
 {
     public class VariationController : MyControllerBase<ShirtVariation>
     {
+        public IOrderRepository _orderRepository;
+        public IOrderFactory _orderFactory;
+        private ILineItemValidator _lineItemValidator;
+
         public ActionResult Index(ShirtVariation currentContent)
         {
             /* Implementation of action. You can create your own view model class that you pass to the view or
@@ -38,8 +48,65 @@ namespace CommerceTraining.Controllers
             return View(viewModel);
         }
 
-        public VariationController(IContentLoader contentLoader, UrlResolver urlResolver, AssetUrlResolver assetUrlResolver, ThumbnailUrlResolver thumbnailUrlResolver) : base(contentLoader, urlResolver, assetUrlResolver, thumbnailUrlResolver)
+        public VariationController(IContentLoader contentLoader, UrlResolver urlResolver, AssetUrlResolver assetUrlResolver, ThumbnailUrlResolver thumbnailUrlResolver, IOrderRepository orderRepository, IOrderFactory orderFactory, ILineItemValidator lineItemValidator) : base(contentLoader, urlResolver, assetUrlResolver, thumbnailUrlResolver)
         {
+            _orderRepository = orderRepository;
+            _orderFactory = orderFactory;
+            _lineItemValidator = lineItemValidator;
         }
+
+
+        public ActionResult AddToCart(ShirtVariation currentContent, decimal Quantity, string Monogram)
+        {
+            // ToDo: (lab D1) add a LineItem to the Cart
+
+            var contactId = PrincipalInfo.CurrentPrincipal.GetContactId();
+            var cart =  _orderRepository.LoadOrCreateCart<ICart>(contactId,"Default");
+
+            var variantCode = currentContent.Code;
+
+            // if we want to redirect
+            ContentReference cartRef = _contentLoader.Get<StartPage>(ContentReference.StartPage).Settings.cartPage;
+            CartPage cartPage = _contentLoader.Get<CartPage>(cartRef);
+            var name = cartPage.Name;
+            var lang = ContentLanguage.PreferredCulture;
+            string passingValue = cart.Name;
+
+            var yabba = cart.GetAllLineItems();
+            if (yabba.Any())
+            {
+                foreach (var lineitem in cart.GetAllLineItems())
+                {
+
+                    if (lineitem.Code.Equals(variantCode))
+                    {
+                        lineitem.Quantity += Quantity;
+                    }
+                }
+            }
+            else
+            {
+                    var lineItem = _orderFactory.CreateLineItem(variantCode);
+                    lineItem.Quantity = Quantity;
+                    lineItem.Properties["Monogram"] = Monogram;
+                    var validated = _lineItemValidator.Validate(lineItem, cart.Market, (item, issue) => { });
+                    if (validated)
+                    {
+                        cart.AddLineItem(lineItem);
+                    }
+             
+            }
+            _orderRepository.Save(cart);
+            
+            
+            // go to the cart page, if needed
+            return RedirectToAction("Index", lang + "/" + name, new { passedAlong = passingValue });
+        }
+
+
+        //public void AddToWishList(ShirtVariant currentContent)
+        //{
+
+        //}
     }
 }
