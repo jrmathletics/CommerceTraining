@@ -74,12 +74,13 @@ namespace CommerceTraining.Controllers
         // ToDo: in the first exercise (E1) Ship & Pay
         public ActionResult Index(CheckOutPage currentPage)
         {
-            // Try to load the cart  
+            // Try to load the cart
 
             var model = new CheckOutViewModel(currentPage)
             {
-                // ToDo: Exercise (E1) - get shipments & payments
-
+                PaymentMethods = GetPaymentMethods(),
+                ShippingMethods = GetShipmentMethods(),
+                ShippingRate = GetShippingRates()
             };
 
             return View(model);
@@ -88,7 +89,32 @@ namespace CommerceTraining.Controllers
 
         // Exercise (E1) creation of GetPaymentMethods(), GetShipmentMethods() and GetShippingRates() goes below
         // ToDo: Get IEnumerables of Shipping and Payment methods along with ShippingRates
+        public IEnumerable<PaymentMethodDto.PaymentMethodRow> GetPaymentMethods()
+        {
+            return new List<PaymentMethodDto.PaymentMethodRow>(
+                    PaymentManager.GetPaymentMethodsByMarket(_currentMarket.GetCurrentMarket().MarketId.Value)
+                        .PaymentMethod.Rows.Cast<PaymentMethodDto.PaymentMethodRow>());
+        }
 
+        public IEnumerable<ShippingMethodDto.ShippingMethodRow> GetShipmentMethods()
+        {
+            return new List<ShippingMethodDto.ShippingMethodRow>(
+                    ShippingManager.GetShippingMethodsByMarket(_currentMarket.GetCurrentMarket().MarketId.Value,false)
+                        .ShippingMethod.Rows.Cast<ShippingMethodDto.ShippingMethodRow>());
+        }
+
+        public IEnumerable<ShippingRate> GetShippingRates()
+        {
+            List<ShippingRate> shippingRates = new List<ShippingRate>();
+            foreach (var shippingMethod in GetShipmentMethods())
+            {
+                shippingRates.Add(new ShippingRate(
+                    shippingMethod.ShippingMethodId,
+                    shippingMethod.DisplayName,
+                    new Money(shippingMethod.BasePrice,shippingMethod.Currency)));
+            }
+            return shippingRates;
+        }
 
 
 
@@ -97,13 +123,18 @@ namespace CommerceTraining.Controllers
         public ActionResult CheckOut(CheckOutViewModel model)
         {
             // ToDo: Load the cart
-
+            var cart = _orderRepository.LoadCart<ICart>(GetContactId(), "Default");
+            if (cart == null)
+            {
+                throw new Exception();
+            }
 
             // ToDo: Add an OrderAddress
-
+            AddAddressToOrder(cart);
 
             // ToDo: Define/update Shipping
-
+            //AdjustFirstShipmentInOrder(cart)
+            //KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             // ToDo: Add a Payment to the Order 
 
@@ -148,10 +179,21 @@ namespace CommerceTraining.Controllers
         }
 
         private void AdjustFirstShipmentInOrder(ICart cart, IOrderAddress orderAddress, Guid selectedShip)
-        { }
+        {
+            IShipment shipment = cart.GetFirstShipment();
+            shipment.ShippingMethodId = selectedShip;
+            shipment.ShippingAddress = orderAddress;
+            shipment.ShipmentTrackingNumber = "ABC123";
+        }
 
         private void AddPaymentToOrder(ICart cart, Guid selectedPaymentGuid)
-        { }
+        {
+            var payment = _orderFactory.CreatePayment();
+            payment.PaymentMethodId = selectedPaymentGuid;
+            payment.PaymentMethodName = "CoursePayment";
+            payment.Amount = _orderGroupCalculator.GetTotal(cart).Amount;
+            cart.AddPayment(payment);
+        }
 
         private IOrderAddress AddAddressToOrder(ICart cart)
         {
@@ -159,7 +201,16 @@ namespace CommerceTraining.Controllers
 
             if (CustomerContext.Current.CurrentContact == null)
             {
-                
+                //return cart.GetFirstShipment().ShippingAddress;
+                return new OrderAddress { Name = "Mathias",
+                    CountryCode = "9999",
+                    CountryName = "Norway",
+                    RegionCode = "9995",
+                    RegionName = "Ostlandet",
+                    DaytimePhoneNumber = "93219491",
+                    FirstName = "Mathias",
+                    LastName = "Olsen",
+                    City = "Oslo"};
             }
             else
             {
