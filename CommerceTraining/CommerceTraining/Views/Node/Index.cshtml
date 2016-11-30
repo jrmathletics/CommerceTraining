@@ -1,0 +1,18 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model CommerceTraining.SupportingClasses.NodeEntryCombo
+
+Nodes:<br/>
+@foreach (var node in Model.nodes)
+{
+    <li><a href="@node.url">@node.name</a></li>
+    <img src="@node.imageTumbUrl" />
+}
+<hr/>
+Variations:<br/>
+@foreach (var entry in Model.entries)
+{
+    <li><a href="@entry.url">@entry.name</a></li>
+    <img src="@entry.imageTumbUrl" />
+}

@@ -3156,6 +3156,11 @@
         <code>true</code> if the Type defines the property, otherwise <code>false</code></returns>
       <exclude />
     </member>
+    <member name="T:EPiServer.Data.Dynamic.Internal.MembersOf`1">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="T:EPiServer.Data.Dynamic.Internal.UpdateQueryable">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Handles updates on a queryable, to make batch updates in DDS.
             </summary>
@@ -3175,29 +3180,29 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Dynamic.Internal.UpdateQueryable`1.#ctor(System.Linq.IQueryable,System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Dynamic.Internal.UpdateQueryable`1.Set``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},``0)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Dynamic.Internal.UpdateQueryable`1.Set``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Dynamic.Internal.UpdateQueryable`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Dynamic.Internal.UpdateQueryable`1.Execute">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Dynamic.Linq.ExpressionProcessorBase">
       <summary>
@@ -3884,9 +3889,9 @@
       <param name="parentContext">The parent context to this context</param>
     </member>
     <member name="T:EPiServer.Data.Dynamic.Providers.SqlServerDataStoreProvider">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Dynamic.Providers.SqlServerDataStoreProvider.GetProviderSpecificParameterName(System.String)">
       <summary>
@@ -5273,14 +5278,14 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Internal.DatabaseVersionValidator.GetStatus(System.Configuration.ConnectionStringsSection)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DatabaseVersionValidator.Update(System.Configuration.ConnectionStringSettings)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DatabaseVersionValidator.ValidateDatabaseVersion(System.Version)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Validates the database version.
@@ -5316,49 +5321,49 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDatabaseDateTimeHandler.ConvertFromDatabase(System.Object,EPiServer.Data.DatabaseDateTimeKind)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDatabaseDateTimeHandler.ConvertToDatabase(System.DateTime,EPiServer.Data.DatabaseDateTimeKind)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ReadDatabaseValueAsUtc(System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ReadDatabaseValueAsLocal(System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ToLocalTime(System.DateTime,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ToUniversalTime(System.DateTime,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ParseToUtc(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.ParseToUtc(System.String,System.IFormatProvider)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Internal.DefaultDateTimeConverter.TryParseToUtc(System.String,System.DateTime@)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.IDatabaseFactory">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Factory implementation for <see cref="T:EPiServer.Data.IDatabaseHandler" /></summary>
@@ -5477,34 +5482,34 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionContext.OpenConnectionAsync">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.ConnectionContext.IsInTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionContext.CloseConnection">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionContext.RollbackTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionContext.CommitTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionContext.BeginTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.ConnectionScope">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Helper class to control the scope of a connection, built for the "using-pattern".
@@ -5513,14 +5518,14 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionScope.#ctor(EPiServer.Data.Providers.Internal.IConnectionContext,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionScope.#ctor(EPiServer.Data.Providers.Internal.IConnectionContext,System.Boolean,System.Action)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.ConnectionScope.IsOwner">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Determines if the callee owns the connection/transaction and should close it.
@@ -5529,14 +5534,14 @@
       <exclude />
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.ConnectionScope.EPiServer#Data#Providers#Internal#IAsyncConnectionScope#Context">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.ConnectionScope.Context">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionScope.Complete">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Complete is called when all actions on the connection has been completed for a scope
@@ -5545,79 +5550,79 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.ConnectionScope.Dispose">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.IAsyncConnectionContext">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IAsyncConnectionContext.OpenConnectionAsync">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.IAsyncConnectionScope">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IAsyncConnectionScope.Context">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.IConnectionContext">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionContext.BeginTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionContext.CloseConnection">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionContext.CommitTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionContext.Connection">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionContext.IsActive">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionContext.IsInTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionContext.OpenConnection">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionContext.RollbackTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionContext.Transaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.IConnectionScope">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Helper class to handle the scope of a connection to the database
@@ -5626,68 +5631,68 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.IConnectionScope.Complete">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionScope.Context">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.IConnectionScope.IsOwner">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.ReadOnlySqlDatabaseHandler">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.SqlDatabaseFactory">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.SqlDatabaseFactory.CurrentHandler">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseFactory.CreateDefaultHandler">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseFactory.CreateHandler(System.Configuration.ConnectionStringSettings)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseFactory.GetCurrentSiteSettings">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseFactory.EPiServer#Data#Internal#IAsyncDatabaseFactory#CreateDefaultHandler">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.SqlDatabaseHandler">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.#ctor(System.Configuration.ConnectionStringSettings,System.Int32,System.TimeSpan,System.TimeSpan)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <param name="connectionStringSettings">Settings containing the connection string used</param>
       <param name="retries">The number of retries, 0 means no retries</param>
       <param name="retryDelay">The delay between each retry</param>
       <param name="databaseQueryTimeout">The timeout for executing commands</param>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.DatabaseQueryTimeout">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. The timeout for command objects created by this classes
@@ -5721,94 +5726,94 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteAsync(System.Func{System.Threading.Tasks.Task})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteTransactionAsync(System.Func{System.Threading.Tasks.Task})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteTransactionAsync``1(System.Func{System.Threading.Tasks.Task{``0}})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.Execute``1(System.Func{``0})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteTransaction(System.Action)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteTransaction``1(System.Func{``0})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.Execute(System.Action)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteLocked(System.String,System.Action)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.ExecuteLocked``1(System.String,System.Func{``0})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.GetProviderSpecificParameterName(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.GetAsyncConnection(System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.GetConnection(System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.CreateCommand(System.String,System.Data.CommandType,System.Object[])">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.CreateConnection">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.EscapeWildcardChars(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.IsInTransaction">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.SetExternalTransaction(System.Data.Common.DbTransaction)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlDatabaseHandler.CreateParametersAndSetValues(System.Data.Common.DbCommand,System.Object[])">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Automatically populates the parameters collection of the command and assigns the provided parameter values
@@ -5849,47 +5854,47 @@
       <exclude />
     </member>
     <member name="T:EPiServer.Data.Providers.Internal.SqlParameterCache">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             CachingMechanism provides caching support for stored procedure 
             parameter discovery and caching
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterCache.CloneParameters(System.Data.IDataParameter[])">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             Create and return a copy of the IDataParameter array.
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterCache.Clear">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             Empties all items from the cache
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterCache.AddParameterSetToCache(System.String,System.Data.IDbCommand,System.Data.IDataParameter[])">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             Add a parameter array to the cache for the command.
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterCache.GetCachedParameterSet(System.String,System.Data.IDbCommand)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             Gets a parameter array from the cache for the command. Returns null if no parameters are found.
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterCache.IsParameterSetCached(System.String,System.Data.IDbCommand)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <devdoc>
             Gets if a given stored procedure on a specific connection string has a cached parameter set
             </devdoc>
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Data.Providers.Internal.SqlParameterDiscoverer.DiscoverParameters(System.Data.Common.DbCommand)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Discovers the parameters for a <see cref="T:System.Data.Common.DbCommand" />.

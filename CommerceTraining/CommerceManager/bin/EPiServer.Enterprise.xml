@@ -852,9 +852,6 @@
     <member name="T:EPiServer.Enterprise.Internal.DefaultDataExporter">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Export pages to ziped XML format.
             </summary>
-      <example>
-            Example that demonstrates how to export a page to a file
-            <code source="../CodeSamples/EPiServer/Enterprise/DataExporterSamples.cs" region="ExportContent" lang="cs" /></example>
       <exclude />
     </member>
     <member name="F:EPiServer.Enterprise.Internal.DefaultDataExporter.ExporterVersion">
@@ -890,19 +887,19 @@
       <exclude />
     </member>
     <member name="P:EPiServer.Enterprise.Internal.DefaultDataExporter.Status">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Enterprise.Internal.DefaultDataExporter.ExportableItems">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Internal.DefaultDataExporter.Export(System.IO.Stream,System.Collections.Generic.IEnumerable{EPiServer.Core.Transfer.ExportSource},EPiServer.Enterprise.ExportOptions)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Internal.DefaultDataExporter.Export">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Starting the export. The export can be done several times to empty
@@ -1040,14 +1037,14 @@
       <exclude />
     </member>
     <member name="P:EPiServer.Enterprise.Internal.DefaultDataImporter.Status">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Internal.DefaultDataImporter.Import(System.IO.Stream,EPiServer.Core.ContentReference,EPiServer.Enterprise.ImportOptions)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Internal.DefaultDataImporter.Import">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Execute the import.
@@ -1255,6 +1252,16 @@
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Raises the ImportProperty event.
             </summary>
       <param name="e">The <see cref="T:EPiServer.Core.Transfer.TransformPropertyEventArgs" /> instance containing the event data to import a property.</param>
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Internal.IDataExportEventsRaiser">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Internal.IDataImportEventsRaiser">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="T:EPiServer.Enterprise.Internal.SerialiazableGuidEntry">
@@ -1564,6 +1571,11 @@
             </summary>
       <exclude />
     </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.ContentTypeTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="P:EPiServer.Enterprise.Transfer.Internal.ContentTypeTransfer.PropertyTransfer">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Gets or sets the property transfer.
             </summary>
@@ -1575,9 +1587,14 @@
             </value>
       <exclude />
     </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.DeleteChildrenTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="T:EPiServer.Enterprise.Transfer.Internal.DeletePageLanguageTransfer">
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Summary description for DeletePageLanguageTransfer.
-            </summary>
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.DeletePageLanguageTransfer.Import(System.Xml.XmlTextReader)">
@@ -1593,8 +1610,13 @@
       <exclude />
     </member>
     <member name="T:EPiServer.Enterprise.Transfer.Internal.DeleteContentTransfer">
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Summary description for DeletedPagesTransfer.
-            </summary>
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.DeleteVisitorGroupsTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.DeleteVisitorGroupsTransfer.#ctor(EPiServer.Enterprise.Transfer.ITransferContext)">
@@ -1632,14 +1654,14 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.EntityReferenceTransferHandler.SerializeItem(EPiServer.Enterprise.IDynamicDataTransfer,System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.EntityReferenceTransferHandler.CreateInstance(EPiServer.Enterprise.IDynamicDataTransfer,System.Xml.Linq.XElement)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.EntityReferenceTransferHandler.SerializeItem(EPiServer.Enterprise.DynamicDataTransferHandler,System.Object)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Replaces the serialized item with an own serialized format.
@@ -1662,6 +1684,16 @@
             </summary>
       <exclude />
     </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.ImplicitlyAddedTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.MoveContentTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="T:EPiServer.Enterprise.Transfer.Internal.ObjectTransferBase">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Base class for object transfer
             </summary>
@@ -1675,6 +1707,11 @@
     <member name="T:EPiServer.Enterprise.Transfer.Internal.TabDefinitionTransfer">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Transfer tabs
             </summary>
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.VisitorGroupsTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.VisitorGroupsTransfer.#ctor(EPiServer.Enterprise.Transfer.ITransferContext)">
@@ -1745,14 +1782,14 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.PageReferenceTransferHandler.SerializeItem(EPiServer.Enterprise.IDynamicDataTransfer,System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.PageReferenceTransferHandler.CreateInstance(EPiServer.Enterprise.IDynamicDataTransfer,System.Xml.Linq.XElement)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Enterprise.Transfer.Internal.PageReferenceTransferHandler.SerializeItem(EPiServer.Enterprise.DynamicDataTransferHandler,System.Object)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Replaces the serialized item with an own serialized format.
@@ -1768,6 +1805,11 @@
       <param name="transferHandler">The transfer handler.</param>
       <param name="serializedItem">The serialized item.</param>
       <returns>An instance of handled type</returns>
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Enterprise.Transfer.Internal.PageVisitedModelTransfer">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="T:EPiServer.Enterprise.Transfer.Internal.VisitorGroupTransferDataHandler">
@@ -1982,20 +2024,13 @@
             </summary>
     </member>
     <member name="T:EPiServer.Enterprise.Util.IntLookup">
-      <summary>
-            Summary description for IntLookup.
-            </summary>
+      <exclude />
     </member>
     <member name="T:EPiServer.Enterprise.Util.PageReferenceReader">
-      <summary>
-            Allows forward-only enumeration over a collection of page references without having all pages in-memory
-            </summary>
-      <remarks>Built for amdinistrative purposes and does not check access rights</remarks>
+      <exclude />
     </member>
     <member name="T:EPiServer.Enterprise.Util.StringInjection">
-      <summary>
-            Summary description for StringInjection.
-            </summary>
+      <exclude />
     </member>
     <member name="T:EPiServer.MirroringService.ExternalDataTracker">
       <summary>

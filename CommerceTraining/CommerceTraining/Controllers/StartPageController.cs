@@ -9,7 +9,7 @@ using CommerceTraining.Models.Pages;
 using EPiServer.ServiceLocation;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Web.Routing;
-//using CommerceTraining.SupportingClasses;
+using CommerceTraining.SupportingClasses;
 
 namespace CommerceTraining.Controllers
 {
@@ -29,7 +29,7 @@ namespace CommerceTraining.Controllers
             _urlResolver = urlResolver;
 
             // uncomment the below when the catalog is modelled
-            // topCategory = contentLoader.Get<StartPage>(PageReference.StartPage).Settings.topCategory;
+            topCategory = contentLoader.Get<StartPage>(PageReference.StartPage).Settings.topCategory;
         }
 
         public string GetUrl(ContentReference contentReference)
@@ -43,9 +43,9 @@ namespace CommerceTraining.Controllers
             {
                 MainBodyStartPage = currentPage.MainBody,
                 myPageChildren = _contentLoader.GetChildren<IContent>(currentPage.ContentLink),
-                
+
                 // uncomment the below when the catalog is modelled
-                //topLevelCategories = _contentLoader.GetChildren<CatalogContentBase>(topCategory).OfType<NodeContent>(),
+                topLevelCategories = _contentLoader.GetChildren<CatalogContentBase>(topCategory).OfType<NodeContent>(),
             };
 
             return View(model);

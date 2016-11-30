@@ -355,9 +355,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CheckOutController.cs" />
+    <Compile Include="Controllers\MyControllerBase.cs" />
+    <Compile Include="Controllers\NodeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Controllers\VariationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -365,6 +369,9 @@
     <Compile Include="Infrastructure\StructureMapDependencyResolver.cs" />
     <Compile Include="Models\Blocks\IHasSettingsBlock.cs" />
     <Compile Include="Models\Blocks\SettingsBlock.cs" />
+    <Compile Include="Models\Catalog\ShirtNode.cs" />
+    <Compile Include="Models\Catalog\ShirtProduct.cs" />
+    <Compile Include="Models\Catalog\ShirtVariation.cs" />
     <Compile Include="Models\Media\ImageModel.cs" />
     <Compile Include="Models\Pages\AccountPage.cs" />
     <Compile Include="Models\Pages\CartPage.cs" />
@@ -380,6 +387,7 @@
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
     <Compile Include="Models\ViewModels\SearchResultViewModel.cs" />
+    <Compile Include="Models\ViewModels\ShirtVariationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportingClasses\FashionVariantViewModel.cs" />
     <Compile Include="SupportingClasses\NameAndUrls.cs" />
@@ -446,6 +454,9 @@
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="module.config" />
+    <Content Include="Views\Node\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Variation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

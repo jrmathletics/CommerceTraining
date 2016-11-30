@@ -1273,6 +1273,11 @@
             </summary>
       <exclude />
     </member>
+    <member name="T:EPiServer.Events.Clients.Internal.StateMessageEventArgs">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="M:EPiServer.Events.Internal.ActiveServerCalculator.ActiveServers">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Gives an indication of how many servers are currently active in the system.
             Note that his calculation has some safe-guards to prevent quick changes.
@@ -1618,10 +1623,20 @@
             Gets the currently configured <see cref="T:EPiServer.Events.Providers.EventProvider" />.
             </summary>
     </member>
+    <member name="T:EPiServer.Events.Providers.Internal.EventMessageFactory">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
+    </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventMessageFactory.Create(System.Guid,System.Object,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
+    </member>
+    <member name="T:EPiServer.Events.Providers.Internal.EventMessageValidator">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
     </member>
     <member name="P:EPiServer.Events.Providers.Internal.EventMessageValidator.EventTimeout">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Gets or sets a value indicating how long this <see cref="T:EPiServer.Events.Providers.Internal.EventMessageValidator" /> should wait before considering an event as missing.
@@ -1629,14 +1644,14 @@
       <exclude />
     </member>
     <member name="E:EPiServer.Events.Providers.Internal.EventMessageValidator.MessageMissed">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventMessageValidator.Validate(EPiServer.Events.EventMessage,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventMessageValidator.OnEventMissed(EPiServer.Events.Providers.EventMissedEventArgs)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Raises the <see cref="E:EventMissed" /> event.
@@ -1700,9 +1715,9 @@
       <exclude />
     </member>
     <member name="P:EPiServer.Events.Providers.Internal.EventProviderService.EPiServer#Events#Providers#IEventProviderAccessor#Provider">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventProviderService.GetProvider(System.String)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Get the event provider registered with name
@@ -1730,9 +1745,9 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventProviderService.RaiseEventAsync(System.Guid,System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventProviderService.OnEventReceived(System.Object,EPiServer.Events.Providers.EventReceivedEventArgs)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Called when any <see cref="T:EPiServer.Events.Providers.EventProvider" /> has recieved a message and raises the <see cref="E:EPiServer.Events.Providers.Internal.EventProviderService.EventReceived" /> event.
@@ -1860,34 +1875,34 @@
       <exclude />
     </member>
     <member name="P:EPiServer.Events.Providers.Internal.EventSiteRegistry.Count">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Events.Providers.Internal.EventSiteRegistry.Publisher">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Events.Providers.Internal.EventSiteRegistry.Subscribers">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventSiteRegistry.Add(EPiServer.Events.Providers.Internal.EventSite,EPiServer.Events.Clients.Internal.RegistrationType)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventSiteRegistry.Remove(System.Guid)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.EventSiteRegistry.Clear">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Events.Providers.Internal.IEventBroker">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Describes an object that is responsible for managing the sending and receiving of events remotely.
@@ -1923,6 +1938,11 @@
     <member name="T:EPiServer.Events.Providers.Internal.IEventHostingEnvironment">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Environment information relating to the event system
             </summary>
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Events.Providers.Internal.IEventMessageValidator">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
       <exclude />
     </member>
     <member name="E:EPiServer.Events.Providers.Internal.IEventMessageValidator.MessageMissed">
@@ -1991,9 +2011,9 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Events.Providers.Internal.NullEventProvider.SendMessage(EPiServer.Events.EventMessage)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Events.Providers.Internal.ProxyEventBroker">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Class to handle <see cref="T:EPiServer.Events.Providers.Internal.IEventBroker" /> access in <see cref="T:EPiServer.Events.Clients.Event" /> instances that was created before the Event Initialization was completed.

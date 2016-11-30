@@ -506,19 +506,19 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Async.Internal.TrackingTokenJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Async.Internal.TrackingTokenJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Async.Internal.TrackingTokenJsonConverter.CanConvert(System.Type)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.DataAnnotations.IgnoreAttribute">
       <summary>
@@ -526,9 +526,9 @@
             </summary>
     </member>
     <member name="T:EPiServer.Framework.ContextCache">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Framework.ContextCache.Current">
       <summary>
@@ -683,9 +683,9 @@
       </returns>
     </member>
     <member name="T:EPiServer.Framework.ITimeProvider">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Framework.ITimeProvider.RequestTime">
       <summary>
@@ -736,9 +736,9 @@
             </summary>
     </member>
     <member name="T:EPiServer.Framework.TimeProvider">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="P:EPiServer.Framework.TimeProvider.Current">
       <summary>
@@ -925,6 +925,25 @@
       <param name="id">The blob identifier.</param>
       <returns>
         <c>True</c> if the identifier is a valid identifier; otherwise <c>false</c>.</returns>
+    </member>
+    <member name="T:EPiServer.Framework.Blobs.BlobExtensions">
+      <summary>
+            Extends <see cref="T:EPiServer.Framework.Blobs.Blob" /> with extension methods
+            </summary>
+    </member>
+    <member name="M:EPiServer.Framework.Blobs.BlobExtensions.ReadAllBytes(EPiServer.Framework.Blobs.Blob)">
+      <summary>
+             Writes the blob stream contents to a byte array.
+            </summary>
+      <param name="blob">The blob</param>
+      <returns> A new byte array.</returns>
+    </member>
+    <member name="M:EPiServer.Framework.Blobs.BlobExtensions.WriteAllBytes(EPiServer.Framework.Blobs.Blob,System.Byte[])">
+      <summary>
+            Writes a whole sequence of bytes to the blob.
+            </summary>
+      <param name="blob">The destination blob</param>
+      <param name="data">The data</param>
     </member>
     <member name="T:EPiServer.Framework.Blobs.BlobProvider">
       <summary>
@@ -1687,10 +1706,13 @@
             Will wait for pending updates to finish 
             </summary>
       <remarks>
-            Typically used for scenarios where there is likely that several calls are done concurrent for an item
+        <para>Typically used for scenarios where there is likely that several calls are done concurrent for an item
             that is costly to load. In that case only one will perform the actual load while others will wait.
-            When the loading is done the waiting threads will be singnalled.
-            </remarks>
+            When the loading is done the waiting threads will be singnalled.</para>
+        <para>This option adds a marker object to the cache to signal that data is being loaded, do not use the same
+            cache key with other API's that do not take <see cref="T:EPiServer.Framework.Cache.ReadStrategy" /> since they will return the marker object
+            if called for example during a costly database operation.</para>
+      </remarks>
     </member>
     <member name="T:EPiServer.Framework.Cache.Internal.RefCountedEvent">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. A wrapper for the ManualResetEvent that enables reference counting. Used to keep 
@@ -1766,9 +1788,9 @@
       <exclude />
     </member>
     <member name="T:EPiServer.Framework.Cache.Internal.WeakReferenceCache">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Cache.Internal.WeakReferenceCache.Insert(System.String,System.Object,EPiServer.Framework.Cache.CacheEvictionPolicy)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Inserts the value into the cache with the specified key.
@@ -3033,9 +3055,9 @@
       <exclude />
     </member>
     <member name="T:EPiServer.Framework.Initialization.InitializationModule">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Initialization.InitializationModule.FrameworkInitialization(EPiServer.Framework.Initialization.HostType)">
       <summary>
@@ -3429,7 +3451,7 @@
           <see cref="M:EPiServer.Framework.Localization.LocalizationService.GetString(System.String)" /> for information on the format of <paramref name="resourceKey" />.</para>
       </remarks>
     </member>
-    <member name="M:EPiServer.Framework.Localization.LocalizationService.AddFallbackStringsToDictionary(System.Collections.Generic.Dictionary{System.String,EPiServer.Framework.Localization.ResourceItem},System.String,System.String[])">
+    <member name="M:EPiServer.Framework.Localization.LocalizationService.AddFallbackStringsToDictionary(System.Collections.Generic.Dictionary{System.String,EPiServer.Framework.Localization.ResourceItem},System.String,System.String[],System.Globalization.CultureInfo)">
       <summary>
             Adds the fallback resource values according to <see cref="P:EPiServer.Framework.Localization.LocalizationService.FallbackCulture" /> and <see cref="P:EPiServer.Framework.Localization.LocalizationService.FallbackBehavior" /> 
             to the <paramref name="targetResources" /> dictionary.
@@ -3437,6 +3459,7 @@
       <param name="targetResources">The target dictionary where the resouces are added.</param>
       <param name="resourceKey">The resource key.</param>
       <param name="normalizedKey">The normalized key.</param>
+      <param name="requestedCulture">The requested culture.</param>
     </member>
     <member name="M:EPiServer.Framework.Localization.LocalizationService.GetAllStringsByCulture(System.String,System.String[],System.Globalization.CultureInfo)">
       <summary>
@@ -3636,9 +3659,9 @@
       <seealso cref="M:EPiServer.Framework.Localization.LocalizationService.GetStringByCulture(System.String,System.Globalization.CultureInfo)" />
     </member>
     <member name="M:EPiServer.Framework.Localization.ProviderBasedLocalizationService.CreateLocalizationService(EPiServer.Framework.Localization.ResourceKeyHandler,EPiServer.Framework.Configuration.Internal.FrameworkOptions,EPiServer.ServiceLocation.IServiceLocator)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Localization.ProviderBasedLocalizationService.Create(EPiServer.Framework.Localization.ResourceKeyHandler,EPiServer.Framework.Configuration.Internal.FrameworkOptions,EPiServer.ServiceLocation.IServiceLocator)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Creates a provider based localization service with providers from the given configuration.
@@ -4521,6 +4544,11 @@
       <param name="serializer">The serializer.</param>
       <param name="value">The value that should be deserialized.</param>
       <returns>An object of type T</returns>
+    </member>
+    <member name="T:EPiServer.Framework.Serialization.Internal.ObjectSerializerFactory">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-API />
+      <exclude />
     </member>
     <member name="M:EPiServer.Framework.Serialization.Internal.ObjectSerializerFactory.#ctor(EPiServer.ServiceLocation.ServiceCollectionAccessor{EPiServer.Framework.Serialization.IObjectSerializer})">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Initializes a new instance of the <see cref="T:EPiServer.Framework.Serialization.Internal.ObjectSerializerFactory" /> class.
@@ -5865,24 +5893,24 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.ClientResourceService.RegisterRequiredResources(System.Web.HttpContextBase)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.ClientResourceService.GetClientResources(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.ClientResourceService.GetClientResources(System.String,EPiServer.Framework.Web.Resources.ClientResourceType[])">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.ClientResourceService.GetRequiredResources(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Client resource manager implementation
@@ -5890,74 +5918,74 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.Require(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireScript(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireScript(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireScriptInline(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireScriptInline(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireStyle(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireStyle(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireStyleInline(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireStyleInline(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireHtmlInline(System.String)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.RequireHtmlInline(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.Require(System.String,System.String,System.String,EPiServer.Framework.Web.Resources.ClientResourceType,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Boolean)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.Require(EPiServer.Framework.Web.Resources.ClientResource)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.GetRequiredResourcesSettings">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Framework.Web.Resources.Internal.RequiredClientResourceList.GetClientResources">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Gets the dynamically requested client resources.
@@ -7865,9 +7893,9 @@
             </summary>
     </member>
     <member name="F:EPiServer.HtmlParsing.ParserOptions.SimpleEnumeratorMask">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.HtmlParsing.ProcessingInstructionFragment">
       <summary>
@@ -8109,14 +8137,14 @@
       <exclude />
     </member>
     <member name="T:EPiServer.HtmlParsing.Internal.StringToken`1">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.HtmlParsing.Internal.StringToken`1.TokenResult">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.HtmlParsing.Internal.StripHtmlFilterRules">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Strips all html from filtered input.
@@ -9394,9 +9422,9 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Security.Internal.VirtualRoleAuthorizationSession.IsInVirtualRole(System.Security.Principal.IPrincipal,System.String,EPiServer.Security.SecurityEntityType,System.Object)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="T:EPiServer.Security.Internal.VirtualRoleToClaimConverter">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Responsible for converting virtual roles into claims
@@ -11462,9 +11490,9 @@
       <exclude />
     </member>
     <member name="M:EPiServer.ServiceLocation.Internal.HybridHttpOrThreadLocal`1.Dispose">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.ServiceLocation.Internal.HybridHttpOrThreadLocal`1.Dispose(System.Boolean)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Dispose implementation
@@ -11878,9 +11906,9 @@
       <exclude />
     </member>
     <member name="M:EPiServer.Validation.Internal.ValidationService.Validate``1(System.Object,``0)">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <inheritdoc />
       <exclude />
-      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
     </member>
     <member name="M:EPiServer.Validation.Internal.ValidationService.Initialize(EPiServer.Framework.Initialization.InitializationEngine)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Initializes this instance.

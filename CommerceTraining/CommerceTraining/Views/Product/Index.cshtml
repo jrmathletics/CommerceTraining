@@ -1,0 +1,18 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using EPiServer.Commerce.Catalog.ContentTypes
+
+@model CommerceTraining.Models.Catalog.ShirtProduct
+
+<div>
+  @Html.PropertyFor(m => m.Code)
+</div>
+
+<div>
+    @Html.PropertyFor(m => m.ContentType)
+</div>
+
+@foreach (var variant in Model.GetVariants())
+{
+    <li>@Html.ContentLink(variant)</li>
+}

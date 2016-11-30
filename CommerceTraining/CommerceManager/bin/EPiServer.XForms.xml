@@ -707,7 +707,7 @@
     </member>
     <member name="T:EPiServer.XForms.XFormException">
       <summary>
-            Summary description for XFormTranslatedException.
+            Exception thrown by XForms
             </summary>
     </member>
     <member name="T:EPiServer.XForms.XFormFolder">
@@ -896,15 +896,15 @@
     </member>
     <member name="T:EPiServer.XForms.Implementation.EMailConnection">
       <summary>
-            This class supports the EPiServer infrastructure and is not intended to be used directly from your code.
             Used to send e-mail for XForms when specified by an editor.
             </summary>
+      <internal-API />
     </member>
     <member name="T:EPiServer.XForms.Implementation.HttpConnection">
       <summary>
-            This class supports the EPiServer infrastructure and is not intended to be used directly from your code.
             Used to re-post XForms to another URL when specified by an editor.
             </summary>
+      <internal-API />
     </member>
     <member name="T:EPiServer.XForms.Parsing.InputFragment">
       <summary>
@@ -1268,8 +1268,7 @@
     </member>
     <member name="T:EPiServer.XForms.Util.SerializableXmlDocument">
       <summary>
-            Summary description for SerializableXmlDocument.
-            </summary>
+            Helper class to serialize <see cref="T:System.Xml.XmlDocument" /></summary>
     </member>
     <member name="M:EPiServer.XForms.Util.XFormActionHelper.ParseActionValues(System.String)">
       <summary>

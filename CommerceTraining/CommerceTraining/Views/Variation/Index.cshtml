@@ -1,0 +1,13 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model CommerceTraining.Models.ViewModels.ShirtVariationViewModel
+@{
+    var x = 0;
+    var y = x;
+}
+<img src="@Model.image"/><br/>
+Price: $@Model.priceString<br/>
+<br/>
+
+Can Be Monogrammed: @Html.CheckBoxFor(m=>m.CanBeMonogrammed)
