@@ -13,5 +13,6 @@ namespace CommerceTraining.Models.ViewModels
         public IEnumerable<ILineItem> LineItems { get; set; }
         public Money SubTotal { get; set; }
         public string WarningMessage { get; set; }
+        public string Messages { get; set; }
     }
 }

@@ -13,6 +13,8 @@ namespace CommerceTraining.Models.ViewModels
         public string url { get; set; }
         public bool CanBeMonogrammed { get; set; }
         public string MainBody { get; set; }
+        public string Messages { get; set; }
+        public decimal DiscountPrice { get; set; }
 
     }
 }

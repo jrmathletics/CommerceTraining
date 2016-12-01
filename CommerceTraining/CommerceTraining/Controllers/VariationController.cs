@@ -10,6 +10,7 @@ using CommerceTraining.Models.ViewModels;
 using EPiServer;
 using EPiServer.Commerce.Catalog;
 using EPiServer.Commerce.Catalog.ContentTypes;
+using EPiServer.Commerce.Marketing;
 using EPiServer.Commerce.Order;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
@@ -27,6 +28,7 @@ namespace CommerceTraining.Controllers
     {
         public IOrderRepository _orderRepository;
         public IOrderFactory _orderFactory;
+        public IPromotionEngine _promotionEngine;
         private ILineItemValidator _lineItemValidator;
 
         public ActionResult Index(ShirtVariation currentContent)
@@ -34,6 +36,15 @@ namespace CommerceTraining.Controllers
             /* Implementation of action. You can create your own view model class that you pass to the view or
              * you can pass the page type for simpler templates */
             var viewModel = new ShirtVariationViewModel();
+            decimal savedAmount = 0;
+            string message = String.Empty;
+            List<RewardDescription> rewardDescriptions;
+            rewardDescriptions = _promotionEngine.Evaluate(currentContent.ContentLink).ToList();
+            if (rewardDescriptions.Count != 0)
+            {
+                savedAmount += rewardDescriptions.FirstOrDefault().SavedAmount;
+                message += rewardDescriptions.FirstOrDefault().Promotion.Description;
+            }
 
             if(currentContent.MainBody!=null)
             { 
@@ -45,16 +56,19 @@ namespace CommerceTraining.Controllers
                 viewModel.image = GetDefaultAsset(currentContent);
             }
             viewModel.CanBeMonogrammed = currentContent.CanBeMonogrammed;
+            viewModel.DiscountPrice = currentContent.GetDefaultPrice().UnitPrice.Amount - savedAmount;
+            viewModel.Messages = message;
 
 
             return View(viewModel);
         }
 
-        public VariationController(IContentLoader contentLoader, UrlResolver urlResolver, AssetUrlResolver assetUrlResolver, ThumbnailUrlResolver thumbnailUrlResolver, IOrderRepository orderRepository, IOrderFactory orderFactory, ILineItemValidator lineItemValidator) : base(contentLoader, urlResolver, assetUrlResolver, thumbnailUrlResolver)
+        public VariationController(IContentLoader contentLoader, UrlResolver urlResolver, AssetUrlResolver assetUrlResolver, ThumbnailUrlResolver thumbnailUrlResolver, IOrderRepository orderRepository, IOrderFactory orderFactory, ILineItemValidator lineItemValidator, IPromotionEngine promotionEngine) : base(contentLoader, urlResolver, assetUrlResolver, thumbnailUrlResolver)
         {
             _orderRepository = orderRepository;
             _orderFactory = orderFactory;
             _lineItemValidator = lineItemValidator;
+            _promotionEngine = promotionEngine;
         }
 
 

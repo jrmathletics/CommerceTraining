@@ -26,5 +26,7 @@ namespace CommerceTraining.Models.Pages
 
         public virtual ContentReference campaignLink { get; set; }
 
+        public virtual string MarketId { get; set; }
+
     }
 }

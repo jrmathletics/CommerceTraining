@@ -78,9 +78,11 @@ namespace CommerceTraining.Controllers
                     warningMessages += "No messages";
                 }
                 _promotionEngine.Run(cart);
+                Money totaldisCount = _orderGroupCalculator.GetOrderDiscountTotal(cart, cart.Currency);
                 var viewModel = new CartViewModel
                 {
                     LineItems = cart.GetAllLineItems(),
+                    Messages = GetDiscountMessages(cart),
                     SubTotal = _orderGroupCalculator.GetSubTotal(cart),
                     WarningMessage = warningMessages
                 };
@@ -89,6 +91,17 @@ namespace CommerceTraining.Controllers
                 return View("Index", viewModel);
             }
             
+        }
+
+        private string GetDiscountMessages(ICart cart)
+        {
+            string messages = string.Empty;
+            var rewardDescriptions = _promotionEngine.Run(cart).ToList();
+            foreach (var rewardDescription in rewardDescriptions)
+            {
+                messages += rewardDescription.Promotion.Description + "   ";
+            }
+            return messages;
         }
 
         public ActionResult Checkout()

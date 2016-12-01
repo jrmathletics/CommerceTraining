@@ -352,6 +352,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\StartPageCurrentMarket.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CheckOutController.cs" />
@@ -397,9 +398,7 @@
     <Compile Include="SupportingClasses\NodeEntryCombo.cs" />
     <Compile Include="SupportingClasses\ProductViewModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ClientResources\Scripts\MenuPin\MenuPinInit.js" />
     <Content Include="Models\Catalog\_PlaceHolder.txt" />

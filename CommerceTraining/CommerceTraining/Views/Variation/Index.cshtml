@@ -28,7 +28,12 @@ Can Be Monogrammed: @Html.CheckBoxFor(m=>m.CanBeMonogrammed)
     @using (Html.BeginForm("AddToWishList", "Variation"))
     {
         <div>
-            <input type="submit" value="Add to wishlist" />
+            <input type="submit" value="Add to wishlist"/>
         </div>
     }
+</div>
+
+<div>
+    Discounted price: @Html.DisplayFor(m=>m.DiscountPrice)
+    Reward information: @Html.DisplayFor(m=>m.Messages)
 </div>
