@@ -123,34 +123,71 @@ namespace CommerceTraining.Controllers
         public ActionResult CheckOut(CheckOutViewModel model)
         {
             // ToDo: Load the cart
+
             var cart = _orderRepository.LoadCart<ICart>(GetContactId(), "Default");
             if (cart == null)
             {
-                throw new Exception();
+                throw new Exception("Cart is null");
             }
 
+            IPurchaseOrder purchaseOrder = new PurchaseOrder(GetContactId());
+            OrderReference orderReference = new OrderReference(1234,"Default",cart.CustomerId,purchaseOrder.GetType());
+
+
+
             // ToDo: Add an OrderAddress
-            AddAddressToOrder(cart);
-
+            var orderaddress = AddAddressToOrder(cart);
             // ToDo: Define/update Shipping
-            //AdjustFirstShipmentInOrder(cart)
-            //KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!KKSE HER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+            AdjustFirstShipmentInOrder(cart, orderaddress, model.SelectedShipId);
             // ToDo: Add a Payment to the Order 
-
+            AddPaymentToOrder(cart,model.SelectedPayId);
 
             // ToDo: Add a transaction scope and convert the cart to PO
+            using (var scope = new Mediachase.Data.Provider.TransactionScope())
+            {
+                cart.ProcessPayments(_paymentProcessor,_orderGroupCalculator);
+                decimal amounts = 0;
+                var firstOrderForm = cart.Forms.FirstOrDefault();
+                if (firstOrderForm != null)
+                {
+                    foreach (var payment in firstOrderForm.Payments)
+                    {
+                        amounts += payment.Amount;
+                    }
+                }
+                if (amounts != cart.GetTotal(_orderGroupCalculator).Amount)
+                {
+                    throw new Exception("Amounts differ");
+                }
+                var mypurchaseorder =_orderRepository.SaveAsPurchaseOrder(cart);
+                orderReference = mypurchaseorder;
+                _orderRepository.Delete(cart.OrderLink);
+                scope.Complete();
+            }
 
+                // ToDo: Housekeeping (Statuses for Shipping and PO, OrderNotes and save the order)
+            var po =_orderRepository.Load(orderReference);
+            po.OrderStatus = OrderStatus.InProgress;
+            po.GetFirstShipment().OrderShipmentStatus = OrderShipmentStatus.InventoryAssigned;
+            var orderNote = new OrderNote();
+            orderNote.Detail = "ShipmentDetail_" + po.GetFirstShipment().ShipmentTrackingNumber;
+            orderNote.LineItemId = po.GetAllLineItems().FirstOrDefault().LineItemId;
+            orderNote.Title = "OrderNoteTitleHere";
+            orderNote.Type = OrderNoteTypes.Custom.ToString();
+            po.Notes.Add(orderNote);
+            var ppp = po as PurchaseOrder;
+            ppp.ExpirationDate = DateTime.Now.AddMonths(1);
+            var purchaseOrder1 = _orderRepository.Save(ppp);
 
-            // ToDo: Housekeeping (Statuses for Shipping and PO, OrderNotes and save the order)
+            
+            
 
-
-            // Final steps, navigate to the order confirmation page
-            StartPage home = _contentLoader.Get<StartPage>(ContentReference.StartPage);
+                // Final steps, navigate to the order confirmation page
+                StartPage home = _contentLoader.Get<StartPage>(ContentReference.StartPage);
             ContentReference orderPageReference = home.Settings.orderPage;
 
             // the below is a dummy, change to "PO".OrderNumber when done
-            string passingValue = String.Empty;
+            string passingValue = purchaseOrder1.OrderGroupId.ToString();
 
             return RedirectToAction("Index", new { node = orderPageReference, passedAlong = passingValue });
         }
@@ -222,11 +259,13 @@ namespace CommerceTraining.Controllers
 
         private static CustomerContact GetContact()
         {
+            //Innlogget brukerinformasjon
             return CustomerContext.Current.GetContactById(GetContactId());
         }
 
         private static Guid GetContactId()
         {
+            //Active user, kan være anon
             return PrincipalInfo.CurrentPrincipal.GetContactId();
         }
     }

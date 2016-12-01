@@ -60,10 +60,26 @@ namespace CommerceTraining.Controllers
         }
 
         // ToDo: Lab incustomers module
-        public ActionResult CreateAccount(AccountPage currentPage, string userName, string passWord)
+        public ActionResult CreateAccount(AccountPage currentPage, string userName, string passWord, string firstName, string lastName)
         {
+            MembershipUser user;
+            MembershipCreateStatus status;
 
-            return null; // for now
+            user = Membership.CreateUser(userName, passWord, userName, null, null, true, out status);
+
+            if (status == MembershipCreateStatus.Success)
+            {
+                var contact = CustomerContact.CreateInstance(user);
+                contact.FirstName = firstName;
+                contact.LastName = lastName;
+                contact.FullName = firstName + " " + lastName;
+                contact.Email = userName;
+                contact.RegistrationSource = "Web";
+                contact.SaveChanges();
+
+                CreateAuthenticationCookie(ControllerContext.HttpContext,userName, AppContext.Current.ApplicationName,false);
+            }
+            return Redirect(_urlResolver.GetUrl(ContentReference.StartPage));
         }
 
         protected void SetContactProperties(CustomerContact contact)

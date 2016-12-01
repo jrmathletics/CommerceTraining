@@ -19,8 +19,8 @@ namespace CommerceTraining.Models.Pages
         public IEnumerable<PaymentMethodDto.PaymentMethodRow> PaymentMethods { get; set; }
         public IEnumerable<ShippingMethodDto.ShippingMethodRow> ShippingMethods { get; set; }
         public IEnumerable<ShippingRate> ShippingRate { get; set; }
-        public Guid SelectedPayId;
-        public Guid SelectedShipId;
+        public Guid SelectedPayId { get; set; }
+        public Guid SelectedShipId { get; set; }
 
 
         public CheckOutViewModel()
