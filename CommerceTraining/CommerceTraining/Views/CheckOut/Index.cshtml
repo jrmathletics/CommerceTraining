@@ -1,4 +1,4 @@
-﻿    @using EPiServer.Core
+﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
 
 @model CommerceTraining.Models.Pages.CheckOutViewModel
@@ -22,7 +22,7 @@
     @using (@Html.BeginForm("CheckOut", "Checkout", FormMethod.Post))
     {
         @Html.DropDownListFor(m => m.SelectedShipId, new SelectList(Model.ShippingMethods, "ShippingMethodId", "DisplayName"))
-            @Html.DropDownListFor(m => m.SelectedPayId, new SelectList(Model.PaymentMethods, "PaymentMethodId", "Name"))
+        @Html.DropDownListFor(m => m.SelectedPayId, new SelectList(Model.PaymentMethods, "PaymentMethodId", "Name"))
 
         <button type="submit">Check out</button>
     }

@@ -236,6 +236,14 @@ namespace CommerceTraining.Controllers
         {
             IOrderAddress shippingAddress = null;
 
+            if (CustomerContext.Current.CurrentContact != null)
+            {
+                var contact = CustomerContext.Current.CurrentContact;
+                CustomerAddress preferredShippingAddress = contact.PreferredShippingAddress;
+                shippingAddress = new OrderAddress(preferredShippingAddress);
+            }
+
+
             if (CustomerContext.Current.CurrentContact == null)
             {
                 //return cart.GetFirstShipment().ShippingAddress;

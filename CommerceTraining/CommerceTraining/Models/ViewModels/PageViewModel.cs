@@ -22,6 +22,11 @@ namespace CommerceTraining.Models.ViewModels
             CurrentPage = currentPage;
         }
 
+        public PageViewModel()
+        {
+            
+        }
+
         public T CurrentPage
         {
             get;

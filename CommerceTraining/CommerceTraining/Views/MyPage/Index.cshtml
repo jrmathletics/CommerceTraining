@@ -1,0 +1,39 @@
+﻿@model CommerceTraining.Models.ViewModels.MyPageViewModel
+
+<style>
+    .form-group { width: 700px; }
+    .label-width {width: 120px;display: inline-block;}
+    .postal-code { width: 110px; }
+    .city { width: 250px; }
+    .input { width: 374px; }
+    .name { width: 180px; }
+</style>
+
+@using (@Html.BeginForm("SaveAddress", "MyPage", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.AddressId)
+    <div class="form-group">
+        <span class="label-width">Title</span>
+        <span>@Html.TextBoxFor(x => x.Title, new {@class = "input"})</span>
+    </div>
+    <div class="form-group">
+        <span class="label-width">Name</span>
+        <span>@Html.TextBoxFor(x => x.FirstName, new {@class = "name"})</span>
+        <span>@Html.TextBoxFor(x => x.LastName, new {@class = "name"})</span>
+    </div>
+    <div class="form-group">
+        <span class="label-width">Address</span>
+        <span>@Html.TextBoxFor(x => x.Address1, new {@class = "input"})</span>
+    </div>
+    <div class="form-group">
+        <span class="label-width">Postalcode/city</span>
+        <span>@Html.TextBoxFor(x => x.PostalCode, new {@class = "postal-code"})</span>
+        <span>@Html.TextBoxFor(x => x.City, new {@class = "city"})</span>
+    </div>
+    <div class="form-group">
+        <span class="label-width">Country code (NOR)</span>
+        <span>@Html.TextBoxFor(x => x.CountryCode, new {@class = "input"})</span>
+    </div>
+
+    <input type="submit" value="Save"/>
+}
